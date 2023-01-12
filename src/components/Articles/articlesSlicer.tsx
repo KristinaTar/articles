@@ -38,7 +38,6 @@ export const articlesSlice = createSlice(
         })
         .addCase(fetchArticles.fulfilled, (state, action) => {
           state.loading = LoadingStatus.Idle;
-          console.log(action.payload.articles);
           state.articles = action.payload.articles;
         })
         .addCase(fetchArticles.rejected, (state) => {

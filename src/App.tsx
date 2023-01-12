@@ -1,19 +1,16 @@
-import React, { useEffect } from 'react';
-import { useAppDispatch } from "./app/hooks";
-import { fetchArticles } from "./components/Articles/articlesSlicer";
+import React from 'react';
+import Articles from "./components/Articles/Articles";
+import Filter from "./components/Filter/Filter";
+
 
 
 
 const App: React.FC = () => {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(fetchArticles());
-  } ,[]);
-
 
   return (
     <>
+      <Filter/>
+      <Articles/>
 
     </>
   );
