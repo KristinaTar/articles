@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Montserrat&family=Poppins&display=swap');
+@import '../../variables';
+
+
+@mixin searchCaption {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $main_color;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.searchTitle {
+ @include searchCaption;
+  margin-bottom: 10px;
+}
+
+.searchResults {
+  @include searchCaption;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.searchInput{
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  background-image: url('../../images/search_icon.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  padding-left: 40px;
+}
+
+.horizontalLine {
+  border-bottom: 1px solid #EAEAEA;
+  margin-top: 10px;
+  margin-bottom: 45px;
+  width: 100%;
+
+}

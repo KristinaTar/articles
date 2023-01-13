@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { fetchArticles, getArticles } from "./articlesSlicer";
+import { fetchArticles, getArticles, getFilteredArticles, getSearchText, setSearchText } from "./articlesSlicer";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,14 +8,16 @@ import { Grid, styled } from '@mui/material';
 import styles from './Articles.module.scss';
 import calendar_icon from '../../images/calendar_icon.svg';
 import arrow_right from '../../images/Arrow_Right.svg';
+import { Article } from "../../types/Articles";
+import { convertDate, getHighlightedText } from "../../scripts/helpers";
 
 const CardContentNoPadding = styled(CardContent)(`
   padding: 25px;
 `);
 
 const Articles: React.FC = () => {
-
-  const articles = useAppSelector(getArticles);
+  const filteredArticles = useAppSelector(getFilteredArticles);
+  const searchText = useAppSelector(getSearchText);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchArticles());
@@ -29,8 +31,8 @@ const Articles: React.FC = () => {
       columns={{ xs: 4, sm: 8, md: 12 }}
       justifyContent="center"
     >
-      {articles.map(article => (
-        <Grid item>
+      {filteredArticles.map(article => (
+        <Grid item style={{ maxWidth: '100%' }}>
           <Card className={styles.card__container}>
             <CardMedia
               component="img"
@@ -41,13 +43,16 @@ const Articles: React.FC = () => {
             <CardContentNoPadding className={styles.card__content}>
               <div className={styles.card__date}>
                 <img src={calendar_icon} alt="icon" className={styles.card__calendarIcon}/>
-                {article.publishedAt}
+                {convertDate(article.publishedAt)}
               </div>
               <div className={styles.card__title}>
-                {article.title}
+                {getHighlightedText(article.title, searchText)}
               </div>
               <div className={styles.card__description}>
-                {article.summary.length < 100 ? article.summary : article.summary.slice(0, 97) + "..."}
+                {getHighlightedText(
+                  article.summary.length < 100 ? article.summary : article.summary.slice(0, 97) + "...",
+                  searchText
+                )}
               </div>
               <div className={styles.card__button}>
                 Read more

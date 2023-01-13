@@ -2,11 +2,13 @@
 @import '../../variables';
 
 .card {
-  font-family: 'Montserrat', sans-serif;
+
 
   &__container {
     width: 400px;
+    max-width: 100%;
     height: 530px;
+    font-family: 'Montserrat', sans-serif;
   }
 
   &__content {
@@ -21,7 +23,7 @@
     line-height: 21px;
     color: $main_color;
     opacity: 0.6;
-    font-family: 'Montserrat', sans-serif;
+
 
   }
 
@@ -34,7 +36,7 @@
     font-size: 24px;
     line-height: 29px;
     color: $main_color;
-    font-family: 'Montserrat', sans-serif;
+
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -45,7 +47,6 @@
 
   &__description {
     color: $main_color;
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 150%;
   }
@@ -54,12 +55,14 @@
     display: flex;
     font-weight: 700;
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+    cursor:pointer;
+
     color: $main_color;
     &Arrow {
       margin: 6px;
       width: 12px;
     }
+
   }
 
 
