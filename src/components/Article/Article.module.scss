@@ -1,0 +1,41 @@
+@import "../../variables";
+
+.article {
+  &__container {
+    @include text;
+    margin: 150px 0 35px;
+    padding: 35px 75px 50px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    color: $main_color;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    color: $main_color;
+    font-size: 16px;
+    line-height: 150%;
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include text;
+    @include detailsLink;
+  }
+
+  &__headerImage {
+    height: 245px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+  }
+}

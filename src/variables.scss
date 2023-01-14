@@ -1,1 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Montserrat&family=Poppins&display=swap");
+
 $main_color: #363636;
+
+@mixin text {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin linkText {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin detailsLink {
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+
+  color: $main_color;
+  &Arrow {
+    margin: 6px;
+    width: 12px;
+  }
+}
