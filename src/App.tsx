@@ -3,14 +3,14 @@ import Articles from "./components/Articles/Articles";
 import styles from "./App.module.scss";
 import { Route, Routes } from "react-router-dom";
 import Article from "./components/Article/Article";
-import { fetchArticles } from "./components/Articles/articlesSlicer";
+import { fetchArticles } from "./app/articlesSlicer";
 import { useAppDispatch } from "./app/hooks";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchArticles());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={styles.appContainer}>

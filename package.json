@@ -2,6 +2,7 @@
   "name": "articles",
   "version": "0.1.0",
   "private": true,
+  "homepage": "KristinaTar.github.io/articles",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -58,6 +59,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.6.0"
+    "eslint-config-prettier": "^8.6.0",
+    "gh-pages": "^4.0.0"
   }
 }

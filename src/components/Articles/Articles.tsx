@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector } from "../../app/hooks";
-import { getFilteredArticles, getSearchText } from "./articlesSlicer";
+import { getFilteredArticles, getSearchText } from "../../app/articlesSlicer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";

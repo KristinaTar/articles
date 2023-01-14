@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   getFilteredArticles,
   setSearchText as setSearchTextAction,
-} from "../Articles/articlesSlicer";
+} from "../../app/articlesSlicer";
 
 const useSearch = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +14,7 @@ const useSearch = () => {
 
   useEffect(() => {
     dispatch(setSearchTextAction(""));
-  }, []);
+  }, [dispatch]);
 
   function updateSearchText(newText: string) {
     setSearchText(newText);

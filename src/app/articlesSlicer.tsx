@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../../app/store";
-import { Article } from "../../types/Articles";
-import * as articlesAPI from "../../api/articles";
-import { LoadingStatus, ErrorTypes } from "../../types/enums";
+import type { RootState } from "./store";
+import { Article } from "../types/Articles";
+import * as articlesAPI from "../api/articles";
+import { LoadingStatus, ErrorTypes } from "../types/enums";
 
 export interface ArticlesState {
   articles: Article[];
@@ -72,7 +72,6 @@ export const articlesSlice = createSlice({
   },
 });
 
-export const getArticles = (state: RootState) => state.articles.articles;
 export const getArticle = (articleId: string | undefined) => (state: RootState) => {
   if (!articleId) return undefined;
 

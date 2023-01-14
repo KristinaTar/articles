@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useAppSelector } from "../../app/hooks";
-import { getArticle } from "../Articles/articlesSlicer";
+import { getArticle } from "../../app/articlesSlicer";
 import styles from "./Article.module.scss";
 import arrow_left from "../../images/Arrow_Left.svg";
 import { Card, Typography } from "@mui/material";
