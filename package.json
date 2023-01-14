@@ -2,7 +2,7 @@
   "name": "articles",
   "version": "0.1.0",
   "private": true,
-  "homepage": "KristinaTar.github.io/articles",
+  "homepage": "https://KristinaTar.github.io/articles",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

@@ -2,12 +2,11 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
 import { Article } from "../types/Articles";
 import * as articlesAPI from "../api/articles";
-import { LoadingStatus, ErrorTypes } from "../types/enums";
+import { LoadingStatus } from "../types/enums";
 
 export interface ArticlesState {
   articles: Article[];
   loading: LoadingStatus;
-  error: string;
   searchText: string;
   filteredArticles: Article[];
 }
@@ -15,7 +14,6 @@ export interface ArticlesState {
 const initialState: ArticlesState = {
   articles: [],
   loading: LoadingStatus.Idle,
-  error: "",
   searchText: "",
   filteredArticles: [],
 };
@@ -67,7 +65,6 @@ export const articlesSlice = createSlice({
       })
       .addCase(fetchArticles.rejected, (state) => {
         state.loading = LoadingStatus.Failed;
-        state.error = ErrorTypes.FailedToFetch;
       });
   },
 });
@@ -78,6 +75,7 @@ export const getArticle = (articleId: string | undefined) => (state: RootState) 
   return state.articles.articles.find((article) => article.id === Number(articleId));
 };
 export const getFilteredArticles = (state: RootState) => state.articles.filteredArticles;
+export const getLoadingStatus = (state: RootState) => state.articles.loading;
 export const getSearchText = (state: RootState) => state.articles.searchText;
 export const { setSearchText } = articlesSlice.actions;
 

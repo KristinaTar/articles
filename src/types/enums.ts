@@ -3,7 +3,3 @@ export enum LoadingStatus {
   Loading = "loading",
   Failed = "failed",
 }
-
-export enum ErrorTypes {
-  FailedToFetch = "Failed to fetch",
-}
