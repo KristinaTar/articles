@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/KristinaTar.github.io/articles/static/css/main.b9999af0.css",
+    "main.js": "/KristinaTar.github.io/articles/static/js/main.9ba5a1af.js",
+    "index.html": "/KristinaTar.github.io/articles/index.html",
+    "static/media/Arrow_Left.svg": "/KristinaTar.github.io/articles/static/media/Arrow_Left.5ab17a18fdc37c472dc3a605f61c0564.svg",
+    "static/media/Arrow_Right.svg": "/KristinaTar.github.io/articles/static/media/Arrow_Right.da47d01a9fb2ed34b3c39cae87ee5638.svg",
+    "static/media/calendar_icon.svg": "/KristinaTar.github.io/articles/static/media/calendar_icon.5af5e28336e0a3de461aa50dda8ddd31.svg",
+    "static/media/search_icon.svg": "/KristinaTar.github.io/articles/static/media/search_icon.fa6653935ac869051f42.svg",
+    "main.b9999af0.css.map": "/KristinaTar.github.io/articles/static/css/main.b9999af0.css.map",
+    "main.9ba5a1af.js.map": "/KristinaTar.github.io/articles/static/js/main.9ba5a1af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9999af0.css",
+    "static/js/main.9ba5a1af.js"
+  ]
+}
